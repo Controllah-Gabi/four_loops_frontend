@@ -1,0 +1,100 @@
+* {
+  background-color: #6fa9c5;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #e3c284;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #112541;
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navlink {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+/* img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.navBar {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.bottom-half-card {
+  text-align: center;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+}
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
