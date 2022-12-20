@@ -18,7 +18,6 @@ function App() {
         <Route path="/create" element={<Create />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-      <Card />
     </div>
   );
 }

@@ -1,3 +1,7 @@
+import { PostPage } from "./PostPage";
+
 export default function Create() {
-  return <div>STephen Was 'eRe</div>;
+  return <div>
+    <PostPage/>
+  </div>;
 }

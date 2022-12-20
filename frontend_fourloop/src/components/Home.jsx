@@ -1,3 +1,7 @@
+import Card from "./Card";
 export default function Home() {
-  return <></>;
+
+  return( <main>
+    <Card/>
+  </main>)
 }
