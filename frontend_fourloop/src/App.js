@@ -11,7 +11,7 @@ import Card from "./components/Card";
 function App() {
   return (
     <div>
-      <img src={logo} alt="coders-logo" />
+      <img src={logo} alt="coders-logo" id="logo" />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
