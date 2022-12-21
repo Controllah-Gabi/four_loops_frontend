@@ -1,38 +1,46 @@
 import React from "react";
 import { useState } from "react";
 
-export const PostPage = () => {
-  const [uploadImg, setuploadImg] = useState(undefined);
+export default function IndividualPost() {
+  const [postData, setPostData] = useState({});
+  const [commentData, setCommentData] = useState([]);
 
-  const handleChange = (e) => {
-    setuploadImg(e.target.files[0]);
-
-    // console.log(URL.createObjectURL(e.target.files[0]))
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(e.target[0].value);
+    setCommentData([
+      ...commentData,
+      { body: e.target[0].value, date: new Date().toString(), votes: 0 },
+    ]);
   };
-  return (
-    <div>
-      <form>
-        <label>Select a file</label>
-        <input
-          type="file"
-          name="Myfile"
-          accept="image/png, image/gif, image/jpeg"
-          id="file"
-          onChange={handleChange}
-        />
-        {uploadImg ? (
-          <img id="image" src={URL.createObjectURL(uploadImg)} />
-        ) : null}
-        <textarea rows="2" cols="50" id="text"></textarea>
-        <button
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
-        >
-          Submit
-        </button>
+
+  return !commentData ? null : (
+    <main>
+      <img src={postData.img} alt={postData.img} />
+      <p id="post-description">{postData.caption}</p>
+      <section>
+        <div>
+          {commentData.map((el) => {
+            return (
+              <div key={el.body}>
+                <h3>Posted by Thomas at {el.date}</h3>
+                <p id="description">{el.body}</p>
+                <p>Votes: {el.votes}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <form className="comment-form" id="comment-form" onSubmit={handleSubmit}>
+        <label htmlFor="">Post comment here:</label>
+        <textarea
+          name="comment-text"
+          id="comment-text"
+          cols="30"
+          rows="3"
+        ></textarea>
+        <button type="submit">Submit</button>
       </form>
-    </div>
+    </main>
   );
-};
+}
