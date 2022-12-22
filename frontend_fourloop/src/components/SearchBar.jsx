@@ -1,7 +1,6 @@
 import { useState } from "react";
 import search from "../assets/icons8-search.svg";
 
-
 export const SearchBar = ({ setSearchTerm }) => {
   const [newSearchTerm, setNewSearchTerm] = useState("");
   const handleSubmit = (event) => {
@@ -21,11 +20,19 @@ export const SearchBar = ({ setSearchTerm }) => {
     //   <button>Search</button>
     // </form>
     <div className="Search">
-    <form>
-  <label for="search">Search for stuff</label>
-  <input id="search" type="search" placeholder="Search..." autofocus required />
-  <button type="submit"><img src={search}></img></button>    
-</form>
-</div>
+      <form>
+        <label for="search">Search for stuff</label>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search..."
+          autofocus
+          required
+        />
+        <button className="magbutton" type="submit">
+          <img src={search}></img>
+        </button>
+      </form>
+    </div>
   );
 };
