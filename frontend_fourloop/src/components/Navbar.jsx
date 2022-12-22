@@ -1,9 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/coders-logo.png";
 
 export default function Navbar() {
   return (
     <nav className="navBar">
+      <div className="logo">
+        <img src={logo} alt="coders-logo" id="logo" />
+      </div>
       <ul className="navList">
         <li className="navlink">
           <NavLink to="/">Home</NavLink>
