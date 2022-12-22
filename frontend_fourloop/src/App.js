@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import logo from "./assets/coders-logo.png";
 import Card from "./components/Card";
+import PostPage from "./components/PostPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/post" element={<PostPage />} />
       </Routes>
     </div>
   );
