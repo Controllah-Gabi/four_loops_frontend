@@ -58,13 +58,13 @@ li {
 li a {
   background-color: #4c698d;
   margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 10px;
-    color: #fff;
-    font-size: large;
+  margin-bottom: auto;
+  margin-left: 10px;
+  color: #fff;
+  font-size: large;
 }
 
-.navlink img{
+.navlink img {
   width: 20% !important;
 }
 
@@ -84,7 +84,7 @@ li.navlink {
 .proj-imgbx {
   background-color: #ffffff;
   width: fit-content;
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .navList {
@@ -138,6 +138,7 @@ main {
   display: block;
   margin-left: 150px;
   width: 100%;
+  height: 40px;
 }
 
 .proj-imgbx {
@@ -190,7 +191,7 @@ main {
 .Search button {
   border: none;
   padding-left: 20px;
-  height: 60px;
+  height: 50px;
   border: 1px solid black;
   border-radius: 0.875rem;
   padding: 10px;
@@ -199,7 +200,7 @@ main {
 }
 
 #search {
-  height: 60px;
+  height: 50px;
 }
 
 input {
@@ -232,4 +233,8 @@ label {
   overflow: hidden;
 }
 
-
+#image {
+  width: 500px;
+  height: 500px;
+  display: block;
+}
