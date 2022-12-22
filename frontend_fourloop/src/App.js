@@ -9,6 +9,7 @@ import { SearchBar } from "./components/SearchBar";
 import IndividualPost from "./components/PostPage";
 
 
+
 function App() {
   return (
     <div>
