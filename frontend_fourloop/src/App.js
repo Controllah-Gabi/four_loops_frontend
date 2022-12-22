@@ -5,21 +5,24 @@ import React from "react";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import "./App.css";
-import logo from "./assets/coders-logo.png";
-import Card from "./components/Card";
-import PostPage from "./components/PostPage";
+import { SearchBar } from "./components/SearchBar";
+import IndividualPost from "./components/PostPage";
 
 function App() {
   return (
     <div>
-      <img src={logo} alt="coders-logo" id="logo" />
-      <Navbar />
+      <div className="present">
+          <Navbar />
+        <div className="present-2">
+          <SearchBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/post" element={<PostPage />} />
+        <Route path="/post" element={<IndividualPost/>}/>
       </Routes>
+        </div>
+      </div>
     </div>
   );
 }
