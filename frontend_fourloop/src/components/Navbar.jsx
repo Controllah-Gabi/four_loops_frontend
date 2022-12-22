@@ -1,6 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/coders-logo.png";
+import Home from "../assets/icons8-home-page-64.png"
+import Plus from "../assets/icons8-plus-key-50.png"
+import Profile from "../assets/icons8-test-account-50.png"
+import Post from "../assets/icons8-post-box-80.png"
+import Code from "../assets/icons8-source-code-30.png"
+import Blog from "../assets/icons8-google-blog-search-50.png"
 
 export default function Navbar() {
   return (
@@ -10,22 +16,22 @@ export default function Navbar() {
       </div>
       <ul className="navList">
         <li className="navlink">
-          <NavLink to="/">Home</NavLink>
+          <img src={Home}></img><NavLink to="/">Home</NavLink>
         </li>
         <li className="navlink">
-          <NavLink to="/create">Create</NavLink>
+          <img src={Plus}></img><NavLink to="/create">Create</NavLink>
         </li>
         <li className="navlink">
-          <NavLink to="/profile">Profile</NavLink>
+          <img src={Profile}></img><NavLink to="/profile">Profile</NavLink>
         </li>
         <li className="navlink">
-          <NavLink to="/post">Post</NavLink>
+          <img src={Post}></img><NavLink to="/post">Post</NavLink>
         </li>
         <li className="navlink">
-          <NavLink to="/code">Code</NavLink>
+          <img src={Code}></img><NavLink to="/code">Code</NavLink>
         </li>
         <li className="navlink">
-          <NavLink to="/blog">Blog</NavLink>
+          <img src={Blog}></img><NavLink to="/blog">Blog</NavLink>
         </li>
       </ul>
     </nav>

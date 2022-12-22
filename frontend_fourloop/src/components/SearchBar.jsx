@@ -30,7 +30,7 @@ export const SearchBar = ({ setSearchTerm }) => {
           required
         />
         <button className="magbutton" type="submit">
-          <img src={search}></img>
+          <img src={search} alt="search icon"></img>
         </button>
       </form>
     </div>
