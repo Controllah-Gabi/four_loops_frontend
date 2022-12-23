@@ -11,9 +11,10 @@ export default function Create() {
     // console.log(URL.createObjectURL(e.target.files[0]))
   };
   return (
-    <div>
-      <form>
-        <label>Select a file</label>
+    <div className="create-post">
+      <form className="ui form">
+      <div className="field">
+      <label>Select a file</label>
         <input
           type="file"
           name="Myfile"
@@ -24,17 +25,12 @@ export default function Create() {
         {uploadImg ? (
           <img id="image" src={URL.createObjectURL(uploadImg)} />
         ) : null}
-        <textarea rows="2" cols="50" id="text"></textarea>
-        <Link to={`/post`}>
-          <button
-            type="submit"
-            // onClick={(e) => {
-            //   e.preventDefault();
-            // }}
-          >
-            Submit
-          </button>
-        </Link>
+      <div class="field">
+    
+  <textarea rows="2" cols="50" id="text"></textarea>
+  </div>
+      <button className="ui button" type="submit" onClick={(e) => {e.preventDefault()}}>Submit</button>
+      </div>
       </form>
     </div>
   );
