@@ -9,8 +9,13 @@ export const Login = (email, password) => {
         email: email,
         password: password
     };
-    console.log("loose joel")
     return codes.post(`/signin`,postBody).then((res) => {
-        console.log(res.data);
+        return (res.data);
+    })
+};
+
+export const Logout = () => {
+    return codes.post(`/signout`).then((res) => {
+        return (res.data);
     })
 };

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Create from "./components/Create";
 import Home from "./components/Home";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -13,11 +13,13 @@ import { LoginPage } from "./components/LoginPage";
 
 function App() {
   const [login,setLogin] = useState(false)
-  
+  useEffect(()=>{
+
+  },[login])
   return !login  ? (<LoginPage setLogin={setLogin}/>):( 
     <div>
       <div className="present">
-          <Navbar />
+          <Navbar setLogin={setLogin}/>
         <div className="present-2">
           <SearchBar/>
       <Routes>
@@ -29,6 +31,7 @@ function App() {
         </div>
       </div>
     </div>
+  
 );
 }
 export default App;

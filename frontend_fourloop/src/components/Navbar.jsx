@@ -7,8 +7,15 @@ import Profile from "../assets/icons8-test-account-50.png"
 import Post from "../assets/icons8-post-box-80.png"
 import Code from "../assets/icons8-source-code-30.png"
 import Blog from "../assets/icons8-google-blog-search-50.png"
+import { Logout } from "../Utils/api";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const handleLogout =()=>{
+   props.setLogin(false)
+   Logout()
+   //api
+   
+  }
   return (
     <nav className="navBar">
       <div className="logo">
@@ -34,6 +41,7 @@ export default function Navbar() {
           <img src={Blog}></img><NavLink to="/blog">Blog</NavLink>
         </li>
       </ul>
+      <button onClick={handleLogout}>Logout</button>
     </nav>
   );
 }

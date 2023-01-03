@@ -7,8 +7,13 @@ export const LoginPage = (props) => {
         event.preventDefault()
         console.log(event.target[0].value)
         console.log(event.target[1].value)
-        Login(event.target[0].value,event.target[1].value)
-        
+        Login(event.target[0].value,event.target[1].value).then(data=>{
+            if(data.status === 'ok'){
+                props.setLogin(true)
+            }
+        })
+        //joelaliyu1@gmail.com
+        //joelali4
     }
     // <form className="comment-form" id="comment-form" onSubmit={handleSubmit}>
     //     <label htmlFor="">Post comment here:</label>
