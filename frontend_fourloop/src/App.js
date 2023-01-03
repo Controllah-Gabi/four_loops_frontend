@@ -9,29 +9,27 @@ import { SearchBar } from "./components/SearchBar";
 import IndividualPost from "./components/PostPage";
 import { LoginPage } from "./components/LoginPage";
 
-
-
 function App() {
-  const [login,setLogin] = useState(false)
-  useEffect(()=>{
-
-  },[login])
-  return !login  ? (<LoginPage setLogin={setLogin}/>):( 
+  const [login, setLogin] = useState(false);
+  const [userInfo, setUserInfo] = useState({});
+  // useEffect(() => {}, [login]);
+  return !login ? (
+    <LoginPage setLogin={setLogin} setUserInfo={setUserInfo} />
+  ) : (
     <div>
       <div className="present">
-          <Navbar setLogin={setLogin}/>
+        <Navbar setLogin={setLogin} />
         <div className="present-2">
-          <SearchBar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/post" element={<IndividualPost/>}/>
-      </Routes>
+          <SearchBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/post" element={<IndividualPost />} />
+          </Routes>
         </div>
       </div>
     </div>
-  
-);
+  );
 }
 export default App;

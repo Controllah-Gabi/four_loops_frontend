@@ -21,12 +21,12 @@ export const SearchBar = ({ setSearchTerm }) => {
     // </form>
     <div className="Search">
       <form>
-        <label for="search">Search for stuff</label>
+        <label htmlFor="search">Search for stuff</label>
         <input
           id="search"
           type="search"
           placeholder="Search..."
-          autofocus
+          autoFocus
           required
         />
         <button className="magbutton" type="submit">
