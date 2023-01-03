@@ -1,17 +1,20 @@
 import { Route, Routes } from "react-router-dom";
 import Create from "./components/Create";
 import Home from "./components/Home";
-import React from "react";
+import React, { useState } from "react";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { SearchBar } from "./components/SearchBar";
 import IndividualPost from "./components/PostPage";
+import { LoginPage } from "./components/LoginPage";
 
 
 
 function App() {
-  return (
+  const [login,setLogin] = useState(false)
+  
+  return !login  ? (<LoginPage setLogin={setLogin}/>):( 
     <div>
       <div className="present">
           <Navbar />
@@ -26,6 +29,6 @@ function App() {
         </div>
       </div>
     </div>
-  );
+);
 }
 export default App;
