@@ -45,3 +45,9 @@ export const patchCodeLikes = (code_id) => {
     return res.data.result.likes;
   });
 };
+
+export const getPostById = (post_id) => {
+  return codes(`/posts/${post_id}`).then((res) => {
+      return res.data.result;
+  });
+};

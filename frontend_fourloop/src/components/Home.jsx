@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { getCodes, getPosts } from "../Utils/api";
 import CardCode from "./CardCode";
 import CardPost from "./CardPost";
@@ -33,25 +34,25 @@ export default function Home() {
     <main>
       {postsData.map((post) => {
         return (
-          <CardPost
+          <Link to={`/api/posts/${post._id}`}><CardPost
             key={post._id}
             img={post.img}
             caption={post.caption}
             createdAt={post.createdAt}
             likes={post.likes}
-          />
+          /></Link>
         );
       })}
       {codesData.map((code) => {
         return (
-          <CardCode
+          <Link to={`/api/codes/${code._id}`}><CardCode
             key={code._id}
             title={code.title}
             code_body={code.code_body}
             description={code.description}
             createdAt={code.createdAt}
             likes={code.likes}
-          />
+          /></Link>
         );
       })}
     </main>

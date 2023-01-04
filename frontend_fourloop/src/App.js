@@ -8,6 +8,7 @@ import "./App.css";
 import { SearchBar } from "./components/SearchBar";
 import IndividualPost from "./components/PostPage";
 import { LoginPage } from "./components/LoginPage";
+import { IndividualPosts } from "./components/IndividualPosts";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -26,6 +27,8 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/post" element={<IndividualPost />} />
+            <Route path="/api/posts/:post_id" element={<IndividualPosts />} />
+            <Route path="/codes/:code_id" element={<IndividualPost />} />
           </Routes>
         </div>
       </div>
