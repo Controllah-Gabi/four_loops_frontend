@@ -264,6 +264,17 @@ label {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.create-code form {
+  padding-left: 25px;
+  padding-right: 25px;
+  display: block;
+  width: auto;
+  background-color: #4c698d;
+  border-radius: 30px;
+  margin: 24px 0 24px 24px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .form-field {
   padding: 100px;
 }
@@ -279,4 +290,14 @@ input {
 .form-field img {
   margin-top: 20px;
   width: -webkit-fill-available;
+}
+
+#code-input {
+  font-family: Consolas, "courier new";
+  color: crimson;
+  background-color: #818181;
+  padding: 2px;
+  font-size: 105%;
+  font-weight: bold;
+  border: 2px solid black;
 }
