@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 import { getPostById, patchPostLikes } from '../Utils/api'
 
 
@@ -33,9 +34,12 @@ export const IndividualPosts = () => {
         <span>Created at: {post.createdAt}</span>
         <hr />
         <span>
-          :+1: {post.likes}
+          :+1: {likes}
           <button onClick={handleClick}>Like</button>
         </span>
+        <Link to={`/posts/${post_id}/comments`}>
+            <p>Comments</p>
+        </Link>
       </div>
     </div>
     </div>

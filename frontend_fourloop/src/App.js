@@ -9,9 +9,12 @@ import { SearchBar } from "./components/SearchBar";
 import IndividualPost from "./components/PostPage";
 import { LoginPage } from "./components/LoginPage";
 import { IndividualPosts } from "./components/IndividualPosts";
+import { IndividualCode } from "./components/IndividualCode";
+import { PostComments } from "./components/PostComments";
+import { CodeComment } from "./components/CodeComment";
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
   const [userInfo, setUserInfo] = useState({});
   // useEffect(() => {}, [login]);
   return !login ? (
@@ -27,8 +30,11 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/post" element={<IndividualPost />} />
-            <Route path="/api/posts/:post_id" element={<IndividualPosts />} />
-            <Route path="/codes/:code_id" element={<IndividualPost />} />
+            <Route path="/posts/:post_id" element={<IndividualPosts />} />
+            <Route path="/codes/:code_id" element={<IndividualCode />} />
+            <Route path="/codes/:code_id/comments" element={<CodeComment />} />
+            <Route path="/posts/:post_id/comments" element={<PostComments/>} />
+
           </Routes>
         </div>
       </div>

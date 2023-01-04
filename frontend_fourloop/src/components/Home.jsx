@@ -34,8 +34,7 @@ export default function Home() {
     <main>
       {postsData.map((post) => {
         return (
-          <Link to={`/api/posts/${post._id}`}><CardPost
-            key={post._id}
+          <Link to={`/posts/${post._id}`} key={post._id}><CardPost
             img={post.img}
             caption={post.caption}
             createdAt={post.createdAt}
@@ -45,8 +44,7 @@ export default function Home() {
       })}
       {codesData.map((code) => {
         return (
-          <Link to={`/api/codes/${code._id}`}><CardCode
-            key={code._id}
+          <Link to={`/codes/${code._id}`} key={code._id}><CardCode
             title={code.title}
             code_body={code.code_body}
             description={code.description}

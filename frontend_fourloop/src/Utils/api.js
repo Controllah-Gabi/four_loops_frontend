@@ -51,3 +51,23 @@ export const getPostById = (post_id) => {
       return res.data.result;
   });
 };
+
+export const getCodesById = (code_id) => {
+  return codes(`/codes/${code_id}`).then((res) => {
+      return res.data.result;
+  });
+};
+
+export const getComments = (post_id) => {
+  return codes(`/posts/${post_id}/comments`).then(res => {
+   
+     return res.data.result
+  });
+};
+
+export const getCommentsCode = (code_id) => {
+  return codes(`/codes/${code_id}/comments`).then(res => {
+    
+     return res.data.result
+  });
+};
