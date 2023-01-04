@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useParams } from 'react-router'
 import { getComments } from '../Utils/api'
+import { AddComment } from './AddComment'
 
 export const PostComments = () => {
     const [comments, setComments] = useState([])
@@ -13,15 +14,17 @@ export const PostComments = () => {
             setComments(commentData)
             setLoading(false)
         })
-    })
+    },[])
   return loading? <h2>Loading</h2>:(
-    comments.map((comment,index)=>{ 
+    <div>
+    <AddComment comments={comments} setComments={setComments}/>
+    {comments.map((comment)=>{ 
     return (<div>
         <p>author: {comment.post_author[0].firstname}</p>
         <p> comment: {comment.body}</p>
         <p>votes :{comment.votes}</p>
         <p>created at: {comment.createdAt}</p>
     </div>)
-    })
-  )
+    })}</div>
+  ) 
 }

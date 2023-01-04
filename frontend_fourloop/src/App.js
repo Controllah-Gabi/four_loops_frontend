@@ -12,11 +12,13 @@ import { IndividualPosts } from "./components/IndividualPosts";
 import { IndividualCode } from "./components/IndividualCode";
 import { PostComments } from "./components/PostComments";
 import { CodeComment } from "./components/CodeComment";
+import { AddComment } from "./components/AddComment";
+import { Login } from "./Utils/api";
 
 function App() {
   const [login, setLogin] = useState(false);
   const [userInfo, setUserInfo] = useState({});
-  // useEffect(() => {}, [login]);
+  
   return !login ? (
     <LoginPage setLogin={setLogin} setUserInfo={setUserInfo} />
   ) : (
@@ -34,6 +36,7 @@ function App() {
             <Route path="/codes/:code_id" element={<IndividualCode />} />
             <Route path="/codes/:code_id/comments" element={<CodeComment />} />
             <Route path="/posts/:post_id/comments" element={<PostComments />} />
+            <Route path="/posts/:post_id/comments" element={<AddComment/>} />
           </Routes>
         </div>
       </div>
