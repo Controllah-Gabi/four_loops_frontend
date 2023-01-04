@@ -48,26 +48,36 @@ export const patchCodeLikes = (code_id) => {
 
 export const getPostById = (post_id) => {
   return codes(`/posts/${post_id}`).then((res) => {
-      return res.data.result;
+    return res.data.result;
   });
 };
 
 export const getCodesById = (code_id) => {
   return codes(`/codes/${code_id}`).then((res) => {
-      return res.data.result;
+    return res.data.result;
   });
 };
 
 export const getComments = (post_id) => {
-  return codes(`/posts/${post_id}/comments`).then(res => {
-   
-     return res.data.result
+  return codes(`/posts/${post_id}/comments`).then((res) => {
+    return res.data.result;
   });
 };
 
 export const getCommentsCode = (code_id) => {
-  return codes(`/codes/${code_id}/comments`).then(res => {
-    
-     return res.data.result
+  return codes(`/codes/${code_id}/comments`).then((res) => {
+    return res.data.result;
+  });
+};
+
+export const postUser = (email, firstname, lastname, password) => {
+  const newUser = {
+    firstname: firstname,
+    lastname: lastname,
+    email: email,
+    password: password,
+  };
+  return codes.post("/register-user", newUser).then((res) => {
+    return res.data.result;
   });
 };

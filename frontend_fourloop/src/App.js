@@ -14,7 +14,7 @@ import { PostComments } from "./components/PostComments";
 import { CodeComment } from "./components/CodeComment";
 
 function App() {
-  const [login, setLogin] = useState(true);
+  const [login, setLogin] = useState(false);
   const [userInfo, setUserInfo] = useState({});
   // useEffect(() => {}, [login]);
   return !login ? (
@@ -33,8 +33,7 @@ function App() {
             <Route path="/posts/:post_id" element={<IndividualPosts />} />
             <Route path="/codes/:code_id" element={<IndividualCode />} />
             <Route path="/codes/:code_id/comments" element={<CodeComment />} />
-            <Route path="/posts/:post_id/comments" element={<PostComments/>} />
-
+            <Route path="/posts/:post_id/comments" element={<PostComments />} />
           </Routes>
         </div>
       </div>
