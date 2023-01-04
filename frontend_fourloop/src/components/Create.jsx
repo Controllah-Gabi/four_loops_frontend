@@ -15,7 +15,7 @@ export default function Create() {
       <form className="ui form">
         <div className="form-field">
           <div className="field">
-            <label>Select a file</label>
+            <label></label>
             <h2>Select a file:</h2>
             <input
               type="file"

@@ -45,3 +45,15 @@ export const patchCodeLikes = (code_id) => {
     return res.data.result.likes;
   });
 };
+
+export const postUser = (email, firstname, lastname, password) => {
+  const newUser = {
+    firstname: firstname,
+    lastname: lastname,
+    email: email,
+    password: password,
+  };
+  return codes.post("/register-user", newUser).then((res) => {
+    return res.data.result;
+  });
+};

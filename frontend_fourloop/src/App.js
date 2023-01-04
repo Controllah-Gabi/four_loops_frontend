@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Create from "./components/Create";
 import Home from "./components/Home";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Profile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import "./App.css";
@@ -14,7 +14,9 @@ function App() {
   const [userInfo, setUserInfo] = useState({});
   // useEffect(() => {}, [login]);
   return !login ? (
-    <LoginPage setLogin={setLogin} setUserInfo={setUserInfo} />
+    <>
+      <LoginPage setLogin={setLogin} setUserInfo={setUserInfo} />
+    </>
   ) : (
     <div>
       <div className="present">
