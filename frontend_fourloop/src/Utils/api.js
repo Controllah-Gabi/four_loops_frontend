@@ -86,7 +86,6 @@ export const postUser = (email, firstname, lastname, password) => {
 
 export const postComment = (newComment, post_id) => {
   const commentBody = {body: newComment}
-  console.log(commentBody);
   return codes.post(`/posts/${post_id}/comments`, commentBody).then((res) => {
     return res.data.result;
   })

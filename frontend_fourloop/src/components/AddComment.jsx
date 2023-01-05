@@ -38,7 +38,7 @@ export const AddComment = ({comments,setComments}) => {
           value={commentBody}
           onChange={e=>{setCommentBody(e.target.value)}} 
         ></textarea>
-        <button type="submit">Submit</button>
+        <button className='comment-input-btn' type="submit">Submit</button>
       </form>
     </div>
   )

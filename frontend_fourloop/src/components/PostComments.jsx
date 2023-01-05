@@ -17,14 +17,14 @@ export const PostComments = () => {
   },[post_id]);
   return loading? <h2>Loading</h2>:(
     <div>
-      <AddComment />
+      <AddComment comments={comments} setComments={setComments} />
       <div>
         {comments.map((comment)=>{ 
-          return (<div key={comment._id}>
-              <p>author: {comment.post_author[0].firstname}</p>
-              <p> comment: {comment.body}</p>
-              <p>votes :{comment.votes}</p>
-              <p>created at: {comment.createdAt}</p>
+          return (<div key={comment._id} className="Comment">
+              <p className='comment-author'>author: {comment.post_author[0].firstname}</p>
+              <p className='comment-body'> comment: {comment.body}</p>
+              <p className='comment-votes'>votes :{comment.votes}</p>
+              <p className='comment-date'>created at: {comment.createdAt}</p>
           </div>)
           })}
       </div>

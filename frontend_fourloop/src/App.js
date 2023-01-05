@@ -15,6 +15,7 @@ import Navbar from "./components/Navbar";
 import Codes from "./components/Codes";
 import SignUp from "./components/SignUp";
 import SinglePost from "./components/singlePost";
+import SingleCode from "./components/singleCode";
 
 function App() {
   
@@ -29,7 +30,9 @@ function App() {
             <Route path="/codes" element={<Codes />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/posts/:post_id" element={<SinglePost />} />
+            <Route path="/codes/:code_id" element={<SingleCode />} />
             <Route path="/posts/:post_id/comments" element={<PostComments />} />
+            <Route path="/codes/:code_id/comments" element={<CodeComment />} />
             {/* <Route path="/home" element={<Home />} />
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />

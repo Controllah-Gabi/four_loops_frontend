@@ -16,11 +16,11 @@ export const CodeComment = () => {
     })
   return loading? <h2>Loading</h2>:(
     comments.map((comment,index)=>{ 
-    return (<div>
-        <p>author: {comment.comment_author[0].firstname}</p>
-        <p> comment: {comment.body}</p>
-        <p>votes :{comment.votes}</p>
-        <p>created at: {comment.createdAt}</p>
+    return (<div className='Comment'>
+        <p className='comment-author'>author: {comment.comment_author[0].firstname}</p>
+        <p className='comment-body'> comment: {comment.body}</p>
+        <p className='comment-votes'>votes :{comment.votes}</p>
+        <p className='comment-date'>created at: {comment.createdAt}</p>
     </div>)
     })
   )

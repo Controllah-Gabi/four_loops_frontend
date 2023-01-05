@@ -16,7 +16,7 @@ export const IndividualPosts = () => {
     const handleClick = () => {
         setLikes(likes + 1);
         patchPostLikes(post_id);
-      };
+    };
     useEffect(()=>{
         
         getPostById(post_id).then((postData)=>{
