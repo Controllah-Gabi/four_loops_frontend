@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function Create() {
   const [uploadImg, setuploadImg] = useState(undefined);
@@ -8,7 +7,6 @@ export default function Create() {
   const handleChange = (e) => {
     setuploadImg(e.target.files[0]);
 
-    // console.log(URL.createObjectURL(e.target.files[0]))
   };
   return (
     <div className="create-post">

@@ -280,3 +280,127 @@ input {
   margin-top: 20px;
   width: -webkit-fill-available;
 }
+.Post-page{
+  width: 50%;
+  margin-left: 10em;
+}
+.Post{
+  display: block;
+  margin-bottom: 2em;
+  border: 1px solid #112541;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.img{
+  width: 100%;
+}
+
+.post-caption,
+.post-date-created,
+.post-likes{
+  color: #112541;
+  margin: 0;
+  text-decoration: none;
+}
+
+.post-date-created,
+.post-likes{
+  font-size: 1.4rem;
+}
+
+.post-caption{
+  font-size: 1.6rem;
+}
+
+.post-likes {
+  color: rgb(155, 7, 7);
+}
+
+.Sign-page {
+  border: 2px solid #112541;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1em;
+}
+
+.Sign-page input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: 1rem;
+  border: 0;
+  font-size: 1.2rem;
+}
+
+.Sign-page input:focus{
+  outline: 0;
+}
+
+.signinbtn {
+  padding: .5em 1.5em;
+  border: 0;
+  background-color: #4c698d;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .9rem;
+  font-weight: bolder;
+}
+
+.logout-btn{
+  color: #fff;
+  font-size: 1.2rem;
+  border: 1px solid #fff;
+  padding: .2em .7em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.suggest-signup{
+  margin: 0;
+  padding: 1em 0;
+  font-size: 1.3rem;
+}
+
+.signup-link{
+  color: #fff;
+  font-weight: bolder;
+}
+
+.register-form {
+  border: 1px solid #112541;
+  width: 50%;
+  padding: 1em;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0 .5em;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.form-input:focus{
+  outline: 0;
+}
+
+.signup-btn {
+  padding: .9em 2em;
+  font-size: .9rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+}
+
+.Single-post{
+  width: 50%;
+  margin-left: 10em;
+  margin-top: 1.7em;
+  border: 1px solid #112541;
+  padding: 1.2em;
+  border-radius: 5px;
+}

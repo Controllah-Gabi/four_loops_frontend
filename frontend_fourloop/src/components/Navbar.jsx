@@ -8,14 +8,23 @@ import Post from "../assets/icons8-post-box-80.png"
 import Code from "../assets/icons8-source-code-30.png"
 import Blog from "../assets/icons8-google-blog-search-50.png"
 import { Logout } from "../Utils/api";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function Navbar(props) {
+export default function Navbar() {
+  const [isLoggedIn, setIsLoggedIn ] = useState(true);
+  const navigate = useNavigate();
+
   const handleLogout =()=>{
-   props.setLogin(false)
-   Logout()
-   //api
-   
+   Logout().then((data) => {
+    if(isLoggedIn){
+      setIsLoggedIn(false);
+      navigate("/");
+    }
+    return data.message;
+   });
   }
+
   return (
     <nav className="navBar">
       <div className="logo">
@@ -23,10 +32,16 @@ export default function Navbar(props) {
       </div>
       <ul className="navList">
         <li className="navlink">
-          <img src={Home}></img><NavLink to="/">Home</NavLink>
+          <img src={Home}></img><NavLink to="/posts">Posts</NavLink>
         </li>
         <li className="navlink">
-          <img src={Plus}></img><NavLink to="/create">Create</NavLink>
+          <img src={Code}></img><NavLink to="/codes">Codes</NavLink>
+        </li>
+        <li className="navlink">
+          <img src={Plus}></img><NavLink to="/create">Create Post</NavLink>
+        </li>
+        <li className="navlink">
+          <img src={Plus}></img><NavLink to="/code">Create Code</NavLink>
         </li>
         <li className="navlink">
           <img src={Profile}></img><NavLink to="/profile">Profile</NavLink>
@@ -35,13 +50,12 @@ export default function Navbar(props) {
           <img src={Post}></img><NavLink to="/post">Post</NavLink>
         </li>
         <li className="navlink">
-          <img src={Code}></img><NavLink to="/code">Code</NavLink>
-        </li>
-        <li className="navlink">
           <img src={Blog}></img><NavLink to="/blog">Blog</NavLink>
         </li>
+        <li className="navlink">
+          <p className="logout-btn" onClick={handleLogout}>Logout</p>
+        </li>
       </ul>
-      <button onClick={handleLogout}>Logout</button>
     </nav>
   );
 }
