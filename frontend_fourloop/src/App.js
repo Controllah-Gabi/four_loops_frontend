@@ -30,6 +30,7 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/posts/:post_id" element={<SinglePost />} />
             <Route path="/posts/:post_id/comments" element={<PostComments />} />
+            <Route path="/create" element={<Create />} />
             {/* <Route path="/home" element={<Home />} />
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />

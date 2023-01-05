@@ -50,9 +50,6 @@ export default function Navbar() {
           <img src={Post}></img><NavLink to="/post">Post</NavLink>
         </li>
         <li className="navlink">
-          <img src={Blog}></img><NavLink to="/blog">Blog</NavLink>
-        </li>
-        <li className="navlink">
           <p className="logout-btn" onClick={handleLogout}>Logout</p>
         </li>
       </ul>
