@@ -3,7 +3,7 @@ import Create from "./components/Create";
 import Home from "./components/Posts";
 import Profile from "./components/Profile";
 import "./App.css";
-import IndividualPost from "./components/PostPage";
+import IndividualPost from "./components/CreateCode";
 import { IndividualPosts } from "./components/IndividualPosts";
 import { IndividualCode } from "./components/IndividualCode";
 import { PostComments } from "./components/PostComments";
@@ -15,6 +15,8 @@ import Navbar from "./components/Navbar";
 import Codes from "./components/Codes";
 import SignUp from "./components/SignUp";
 import SinglePost from "./components/singlePost";
+import CreateCode from "./components/CreateCode";
+
 
 function App() {
   
@@ -31,6 +33,8 @@ function App() {
             <Route path="/posts/:post_id" element={<SinglePost />} />
             <Route path="/posts/:post_id/comments" element={<PostComments />} />
             <Route path="/create" element={<Create />} />
+            <Route path="/createCode" element={<CreateCode />} />
+
             {/* <Route path="/home" element={<Home />} />
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />

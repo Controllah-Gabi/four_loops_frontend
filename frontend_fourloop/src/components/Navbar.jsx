@@ -32,7 +32,7 @@ export default function Navbar() {
       </div>
       <ul className="navList">
         <li className="navlink">
-          <img src={Home}></img><NavLink to="/posts">Posts</NavLink>
+          <img src={Post}></img><NavLink to="/posts">Posts</NavLink>
         </li>
         <li className="navlink">
           <img src={Code}></img><NavLink to="/codes">Codes</NavLink>
@@ -41,13 +41,10 @@ export default function Navbar() {
           <img src={Plus}></img><NavLink to="/create">Create Post</NavLink>
         </li>
         <li className="navlink">
-          <img src={Plus}></img><NavLink to="/code">Create Code</NavLink>
+          <img src={Plus}></img><NavLink to="/createCode">Create Code</NavLink>
         </li>
         <li className="navlink">
           <img src={Profile}></img><NavLink to="/profile">Profile</NavLink>
-        </li>
-        <li className="navlink">
-          <img src={Post}></img><NavLink to="/post">Post</NavLink>
         </li>
         <li className="navlink">
           <p className="logout-btn" onClick={handleLogout}>Logout</p>

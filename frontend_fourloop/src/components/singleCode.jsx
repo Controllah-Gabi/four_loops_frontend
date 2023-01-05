@@ -18,7 +18,9 @@ export default function CardCode(props) {
       <div className="bottom-half-card">
         <h4>{props.title}</h4>
         <hr />
+        <div className="code-box">
         <span>{props.code_body}</span>
+        </div>
         <hr />
         <span>{props.description}</span>
         <hr />
