@@ -16,17 +16,16 @@ import Codes from "./components/Codes";
 import SignUp from "./components/SignUp";
 import SinglePost from "./components/singlePost";
 import CreateCode from "./components/CreateCode";
-
+import SingleCode from "./components/singleCode";
 
 function App() {
-  
   return (
     <div>
       <div className="present">
-      <Navbar />
+        <Navbar />
         <div className="present-2">
           <Routes>
-            <Route path="/" element={<LoginPage />}/>
+            <Route path="/" element={<LoginPage />} />
             <Route path="/posts" element={<Posts />} />
             <Route path="/codes" element={<Codes />} />
             <Route path="/signup" element={<SignUp />} />
@@ -36,7 +35,7 @@ function App() {
             <Route path="/createCode" element={<CreateCode />} />
             <Route path="/codes/:code_id" element={<IndividualCode />} />
             <Route path="/profile" element={<Profile />} />
-
+            <Route path="/codes/:code_id/comments" element={<CodeComment />} />
             {/* <Route path="/home" element={<Home />} />
             <Route path="/create" element={<Create />} />
             <Route path="/profile" element={<Profile />} />
