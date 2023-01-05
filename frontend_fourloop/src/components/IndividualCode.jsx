@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { getCodesById, patchCodeLikes } from '../Utils/api';
+import like from "../assets/love.png"
 
 export const IndividualCode = () => {
     const [likes, setLikes] = useState(0);
@@ -23,24 +24,23 @@ export const IndividualCode = () => {
     
     
     return loading? <h2>Loading</h2>: (
-      <div className="proj-imgbx">
-        <div className="bottom-half-card">
-          <h4>{code.title}</h4>
-          <hr />
-          <span>{code.code_body}</span>
-          <hr />
-          <span>{code.description}</span>
-          <hr />
-          <span>Created at: {code.createdAt}</span>
-          <hr />
-          <span>
-            :+1: {likes}
-            <button onClick={handleClick}>Like</button>
-          </span>
+      <div className="card-code">
+            <h2 className="code-title">{code.title}</h2>
+            <div className="code-box">
+            <p className="code-body">{code.code_body}</p>
+            </div>
+            <div className="desc">
+            <span className="code-description">{code.description}</span>
+            </div>
+            <p className="code-likes">{code.likes}</p>
+            <div className="likes">
+            <button className="likes"><img src={like}></img></button>
+            </div>
+            <p className="code-createdAt">{code.createdAt}</p>
+            <p className="code-author">{code.codeAuthor[0].firstname}</p>
           <Link to={`/codes/${code_id}/comments`}>
-            <p>Comments</p>
+            <p className='comment'>Comments</p>
         </Link>
         </div>
-      </div>
     );
 }

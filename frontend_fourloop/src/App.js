@@ -34,6 +34,7 @@ function App() {
             <Route path="/posts/:post_id/comments" element={<PostComments />} />
             <Route path="/create" element={<Create />} />
             <Route path="/createCode" element={<CreateCode />} />
+            <Route path="/codes/:code_id" element={<IndividualCode />} />
 
             {/* <Route path="/home" element={<Home />} />
             <Route path="/create" element={<Create />} />

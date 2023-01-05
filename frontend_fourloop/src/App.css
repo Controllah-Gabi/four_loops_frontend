@@ -457,6 +457,13 @@ input {
   color: #000000;
 }
 
+.card-code .comment{
+  text-align: center;
+  margin: 10px;
+  border: #000000 solid 1px;
+  border-radius: 30px;
+}
+
 .code-likes{
   margin: 0 !important;
 }
