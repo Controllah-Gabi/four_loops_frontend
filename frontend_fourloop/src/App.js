@@ -35,6 +35,7 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/createCode" element={<CreateCode />} />
             <Route path="/codes/:code_id" element={<IndividualCode />} />
+            <Route path="/profile" element={<Profile />} />
 
             {/* <Route path="/home" element={<Home />} />
             <Route path="/create" element={<Create />} />
